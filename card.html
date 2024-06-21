@@ -16,21 +16,38 @@
     </div>
   </header>
 
-  <section class="congratulation">
-    <h1 class="congratulation__title">Вам открытка!</h1>
-    <p class="congratulation__description">Нажмите на нее, чтобы узнать от кого она и прочитать поздравление</p>
-    <div class="card">
-      <div class="front">
-        <img src="/img/card01.jpg" alt="Открытка 1" class="gift__card-image">
+  <main class="main-content">
+    <section class="congratulation">
+      <div class="container">
+        <h1 class="congratulation__title">Вам открытка!</h1>
+        <p class="congratulation__description">Нажмите на нее, чтобы узнать от кого она и прочитать поздравление</p>
+        <div class="congratulations__card card">
+          <div class="card__inner">
+            <div class="card__front">
+              <img src="/img/card01.jpg" alt="Открытка 1" class="card__image">
+            </div>
+            <div class="card__back">
+              <h2 class="card__title">Поздравление</h2>
+              <div class="card__contacts">
+                <p class="card__detail">
+                  <span class="card__subtitle">от кого</span>
+                  <p class="card__from">Эрен Егер</p>
+                </p>
+                <p class="card__detail">
+                  <span class="card__subtitle">от кого</span>
+                  <p class="card__to">Микаса Аккерман</p>
+                </p>
+              </div>
+              <p class="card__message">Желаю Счастливого Нового года и Рождества!<br>
+                Будьте здоровы и радостны!</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="back">
-        <h2 class="back__congratulation">Поздравление</h2>
-        <p class="back__sender">Эрен Егер</p>
-        <p class="back__receiver">Микаса Аккерман</p>
-        <p class="back__text">Желаю Счастливого Нового года и Рождества!
-          Будьте здоровы и радостны!</p>
-      </div>
-    </div>
-  </section>
+
+    </section>
+  </main>
+
+
 </body>
 </html>
