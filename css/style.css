@@ -25,7 +25,122 @@ html {
 
 .body {
   font-family: Nunito, sans-serif;
+  min-width: 320px;
+  min-height: 100vh;
+  /*свойства для различных браузеров*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+
+  font-size: 16px;
+  line-height: 1.4;
+  color: #221f1f;
 }
+
+.body--gift {
+  background: #B9ECED url(../img/bg-gift.jpg) center/cover;
+}
+
+.body--congratulation {
+  background: #FAA0B5 url(../img/bg-congratulations.jpg) center/cover;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.header__logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gift {
+  padding: 20px 0 80px;
+}
+
+.gift__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.gift__description {
+
+}
+
+.gift__wrapper {
+
+}
+
+.gift__card {
+
+}
+
+.gift__swiper {
+
+}
+
+.gift__swiper--card {
+
+}
+
+.gift__card-slide {
+
+}
+
+.gift__card-image {
+
+}
+
+.gift__swiper--thumb {
+
+}
+
+.gift__card-thumb {
+
+}
+
+.gift__form {
+
+}
+
+.form {
+
+}
+
+.form__label {
+
+}
+
+.form__label-text {
+
+}
+
+.form__field {
+
+}
+
+.form__label--textarea {
+
+}
+
+.form__field--textarea {
+
+}
+
+.form__button {
+
+}
+
 
 .header__logo {
   width: 180px;
