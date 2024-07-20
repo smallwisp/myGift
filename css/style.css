@@ -71,18 +71,23 @@ html {
   font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
+  margin: 0 0 16px;
 }
 
 .gift__description {
-
+  font-size: 20px;
+  margin: 0 0 50px;
 }
 
 .gift__wrapper {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
 }
 
 .gift__card {
-
+  max-width: 580px;
 }
 
 .gift__swiper {
@@ -90,31 +95,36 @@ html {
 }
 
 .gift__swiper--card {
-
+  margin-bottom: 20px;
 }
 
 .gift__card-slide {
-
+  border: 2px solid rgb(75, 170, 0);
+	border-radius: 20px;
+	background: rgb(255, 255, 255);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .gift__card-image {
-
-}
-
-.gift__swiper--thumb {
-
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .gift__card-thumb {
-
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .gift__form {
-
+  max-width: 488px;
 }
 
 .form {
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 .form__label {
@@ -130,7 +140,7 @@ html {
 }
 
 .form__label--textarea {
-
+  grid-column: 1 / -1;
 }
 
 .form__field--textarea {
