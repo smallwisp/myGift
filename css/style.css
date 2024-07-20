@@ -125,18 +125,32 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  justify-items: start;
 }
 
 .form__label {
-
+  width: 100%;
 }
 
 .form__label-text {
-
+  display: block;
+  margin-bottom: 4px;
 }
 
 .form__field {
+  width: 100%;
+  font: inherit;
+  border: 1px solid rgb(222, 222, 222);
+	border-radius: 6px;
+	background-color: rgb(251, 251, 251);
+  padding: 8px 16px;
+  outline: none;
+}
 
+.form__field:hover,
+.form__field:focus-visible,
+.form__field:active {
+  border-color: #999;
 }
 
 .form__label--textarea {
@@ -144,13 +158,9 @@ html {
 }
 
 .form__field--textarea {
-
+  resize: vertical;
+  min-height: 150px;
 }
-
-.form__button {
-
-}
-
 
 .header__logo {
   width: 180px;
@@ -159,5 +169,61 @@ html {
 
 .form__button {
   border-radius: 32px;
-  background: rgb(75, 170, 0);
+  background-color: rgb(75, 170, 0);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 24px;
+}
+
+.form__button:hover:not(:disabled) {
+  background-color: #58c601;
+
+}
+
+.form__button:focus-visible {
+  border-color: #58c601;
+}
+
+.form__button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+}
+
+.form__button:disabled {
+  opacity: 0.4;
+}
+
+/* card.html */
+.congratulation {
+}
+.congratulation__title {
+}
+.congratulation__description {
+}
+.congratulations__card {
+}
+.card {
+}
+.card__inner {
+}
+.card__front {
+}
+.card__image {
+}
+.card__back {
+}
+.card__title {
+}
+.card__contacts {
+}
+.card__detail {
+}
+.card__subtitle {
+}
+.card__from {
+}
+.card__to {
+}
+.card__message {
 }
