@@ -199,6 +199,7 @@ html {
   padding-top: 20px;
   padding-bottom: 145px;
 }
+
 .congratulation__title {
   text-align: center;
   font-size: 32px;
@@ -206,6 +207,7 @@ html {
   line-height: 1.2;
   margin: 0 0 16px;
 }
+
 .congratulation__description {
   font-size: 20px;
   font-weight: 400;
@@ -213,49 +215,81 @@ html {
   text-align: center;
   margin: 0 0 50px;
 }
+
 .congratulations__card {
   margin: 0 auto;
 }
+
 .card {
   position: relative;
   width: 580px;
   height: 375px;
   perspective: 1000px;
 }
+
 .card__inner {
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 0.75s;
   width: 100%;
   height: 100%;
 }
+
+.card:hover .card__inner {
+  transform: rotateY(180deg);
+}
+
 .card__front {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
   inset: 0;
-  background-color: #fff;
-  
-}
-.card__image {
-  margin: auto;
-}
-.card__back {
-  margin: 0;
+  backface-visibility: hidden;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card__back {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  transform: rotateY(180deg);
 	background: rgb(255, 255, 255);
 }
+
 .card__title {
+  color: rgb(255, 68, 68);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 24px;
 }
+
 .card__contacts {
+  margin-bottom: 24px;
 }
+
 .card__detail {
+  margin: 0 0 8px;
+  display: flex;
+  gap: 16px;
 }
+
+.card__detail:last-child {
+  margin-bottom: 0;
+}
+
 .card__subtitle {
+  opacity: 0.3;
+  min-width: 54px;
 }
-.card__from {
-}
-.card__to {
-}
+
 .card__message {
+  font-size: 20px;
+  margin: 0;
 }
