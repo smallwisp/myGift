@@ -48,9 +48,9 @@ html {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1260px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 40px;
 }
 
 .header {
@@ -83,15 +83,12 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 30px;
+  gap: 96px;
 }
 
 .gift__card {
   max-width: 580px;
-}
-
-.gift__swiper {
-
+  width: calc(50% - 16px);
 }
 
 .gift__swiper--card {
@@ -118,7 +115,8 @@ html {
 }
 
 .gift__form {
-  max-width: 488px;
+  max-width: 480px;
+  width: 100%;
 }
 
 .form {
@@ -135,6 +133,7 @@ html {
 .form__label-text {
   display: block;
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .form__field {
@@ -292,4 +291,62 @@ html {
 .card__message {
   font-size: 20px;
   margin: 0;
+}
+
+@media (width <= 1080px) {
+  .header {
+    padding: 32px 0 16px;
+  }
+
+  .gift {
+    padding: 16px 0 34px;
+  }
+
+  .gift__title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .gift__description {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .gift__card {
+    max-width: 464px;
+    width: 100%;
+    padding-top: 8px;
+  }
+
+  .form {
+    row-gap: 12px;
+  }  
+}
+
+@media (width <= 980px) {
+  .container {
+    padding: 0 44px;
+  }
+
+  .gift__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .gift__form {
+    max-width: 100%;
+  }
+}
+
+@media (width <= 580px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header {
+    padding-top: 24px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
 }
