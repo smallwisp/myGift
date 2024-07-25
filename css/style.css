@@ -110,6 +110,7 @@ html {
 }
 
 .gift__card-thumb {
+  max-width: 72px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -221,7 +222,7 @@ html {
 
 .card {
   position: relative;
-  width: 580px;
+  max-width: 580px;
   height: 375px;
   perspective: 1000px;
 }
@@ -338,11 +339,6 @@ html {
     margin-bottom: 32px;
   }
 
-  .congratulations__card {
-    max-width: 464px;
-    width: 100%;
-    max-height: 186px;
-  }
 }
 
 @media (width <= 980px) {
@@ -372,6 +368,11 @@ html {
     grid-template-columns: 1fr;
   }
 
+  .gift__card-thumb {
+    width: 56px;
+    border-radius: 4px;
+  }
+
   /* card.html */
   .congratulation {
     padding-top: 16px;
@@ -389,7 +390,7 @@ html {
   }
 
   .card__back {
-    padding-top: 16px;
+    padding: 24px;
   }
 
   .card__title {
@@ -402,7 +403,12 @@ html {
   }
 
   .card__contacts {
-    margin-top: 158px;
+    margin-bottom: 0;
+  }
+
+  .card {
+    height: calc((186 / 288 * 100vw) - 20px);
+    margin-bottom: 20px;
   }
 
 }
