@@ -411,4 +411,8 @@ html {
     margin-bottom: 20px;
   }
 
+  .card__subtitle {
+    opacity: 0.5;
+  }
+
 }

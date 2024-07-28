@@ -18,3 +18,5 @@ const swiperMain = new Swiper('.gift__swiper--card', {
     swiper: swiperThumb,
   } 
 });
+
+const phoneInputs = document.querySelectorAll('.form__field--phone');
