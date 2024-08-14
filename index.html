@@ -38,16 +38,16 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide gift__card-slide">
-                  <img src="/img/card01.jpg" alt="Октрытка 1" class="gift__card-image">
+                  <img src="/img/card01.jpg" alt="Октрытка 1" class="gift__card-image" data-card="card_01">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="/img/card02.jpg" alt="Октрытка 2" class="gift__card-image">
+                  <img src="/img/card02.jpg" alt="Октрытка 2" class="gift__card-image" data-card="card_02">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="/img/card03.jpg" alt="Октрытка 3" class="gift__card-image">
+                  <img src="/img/card03.jpg" alt="Октрытка 3" class="gift__card-image" data-card="card_03">
                 </div>
                 <div class="swiper-slide gift__card-slide">
-                  <img src="/img/card04.jpg" alt="Октрытка 4" class="gift__card-image">
+                  <img src="/img/card04.jpg" alt="Октрытка 4" class="gift__card-image" data-card="card_04">
                 </div>
               </div>
             </div>
@@ -95,6 +95,8 @@
               <span class="form__label-text">поздравительный текст</span>
               <textarea class="form__field form__field--textarea" name="message" placeholder="Напишите теплые слова"></textarea>
             </label>
+
+            <input type="hidden" class="form__card" name="card">
 
             <button type="submit" class="form__button" disabled>Отправить</button>
 

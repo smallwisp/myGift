@@ -21,7 +21,19 @@ const swiperMain = new Swiper('.gift__swiper--card', {
 
 const phoneInputs = document.querySelectorAll('.form__field--phone');
 const form = document.querySelector('.form');
-const submitButton = document.querySelector('.form__button');
+const submitButton = form.querySelector('.form__button');
+const cardInput = form.querySelector('.form__card');
+
+const updateCardInput = () => {
+  const activeSlide = document.querySelector('.gift__swiper--card .swiper-slide-active');
+
+  const cardData = activeSlide.querySelector('.gift__card-image').dataset.card;
+  cardInput.value = cardData;
+};
+
+updateCardInput()
+
+swiperMain.on('slideChangeTransitionEnd', updateCardInput)
 
 phoneInputs.forEach((item) => {
   IMask(item, {
@@ -68,7 +80,10 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
-  const formData = new FormData();
+  const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
+  
+
+  form.reset()
 })
