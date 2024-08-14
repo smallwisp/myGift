@@ -44,11 +44,9 @@ const updateSubmitButton = () => {
 };
 
 const phoneValidateOption = {
-  presence: {
-    message: 'Поле телефон обязательно для заполнения!',
-  },
   format: {
-    pattern: '\\+7\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}'
+    pattern: '\\+7\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}',
+    message: 'Номер телефона должен соответствовать формату: "+7(ХХХ)ХХХ-ХХ-ХХ"',
   }
 }
 
@@ -57,8 +55,20 @@ form.addEventListener('input', updateSubmitButton)
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const errors = Validate(form, {
-    sender_phone: ,
-    receiver_phone:
+  const errors = validate(form, {
+    sender_phone: phoneValidateOption,
+    receiver_phone: phoneValidateOption,
   })
+
+  if (errors) {
+    for (const key in errors) {
+      const errorString = errors[key];
+      alert(errorString)
+    }
+    return;
+  }
+
+  const formData = new FormData();
+  const data = Object.fromEntries(formData);
+
 })
