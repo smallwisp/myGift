@@ -1,3 +1,7 @@
+const API_URL = 'https://mature-instinctive-hail.glitch.me/';
+// const API_URL = 'https://localhost:3000/';
+
+
 const swiperThumb = new Swiper('.gift__swiper--thumb', {
   slidesPerView: "auto",
   spaceBetween: 12,
@@ -64,7 +68,7 @@ const phoneValidateOption = {
 
 form.addEventListener('input', updateSubmitButton)
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const errors = validate(form, {
@@ -83,7 +87,27 @@ form.addEventListener('submit', (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  
+  try {
+    const response = await fetch(`${API_URL}/api/gift`, {
+      method: 'POST',
+      headers: {
+        "Conten-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-  form.reset()
+    const result = await response.json();
+    
+    if (response.ok) {
+      form.reset()
+      
+    } else {
+      alert(`Ошибка при отправке: ${result.message}`)
+    }
+
+  } catch (error) {
+    console.error(`Ошибка при отправке: ${error}`)
+    alert('Произошла ошибка! Попробуйте позже.')
+  }
+
 })
