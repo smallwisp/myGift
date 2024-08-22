@@ -1,5 +1,8 @@
 'use strict'
 
+const API_URL = 'https://mature-instinctive-hail.glitch.me/';
+
+
 const card = document.querySelector('.card');
 const cardTitle = document.querySelector('.card__title');
 const cardContacts = document.querySelector('.card__contacts');
@@ -19,14 +22,30 @@ const rearrangeElement = () => {
   }
 };
 
-rearrangeElement()
+const getIdFromUrl = () => {
+  const params = new URLSearchParams(location.search)
+  return params.get('id')
+}
 
-const init = () => {
-  rearrangeElement()
-  window.addEventListener('resize', rearrangeElement)
+const getGiftData = async(id) => {
+  try {
+    const response = await fetch(`${}`)
+  } catch (error) {
+    
+  }
 };
 
-init()
+const init = async() => {
+  rearrangeElement()
+  window.addEventListener('resize', rearrangeElement)
+
+  const id = getIdFromUrl();
+  const data = await getGiftData(id)
+};
+
+init();
+
+
 
 
 

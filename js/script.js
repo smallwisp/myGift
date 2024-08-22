@@ -89,9 +89,9 @@ form.addEventListener('submit', async (event) => {
 
   try {
     const response = await fetch(`${API_URL}/api/gift`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        "Conten-Type": "application/json"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     });
@@ -99,8 +99,8 @@ form.addEventListener('submit', async (event) => {
     const result = await response.json();
     
     if (response.ok) {
+      prompt('Открытка успешно сохранена. Доступна по дресу: ', `${location.origin}/card.html?id=${result.id}`,);
       form.reset()
-      
     } else {
       alert(`Ошибка при отправке: ${result.message}`)
     }
