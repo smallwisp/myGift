@@ -29,9 +29,15 @@ const getIdFromUrl = () => {
 
 const getGiftData = async(id) => {
   try {
-    const response = await fetch(`${}`)
+    const response = await fetch(`${API_URL}/api/gift/${id}`);
+
+    if (response.ok) {
+      return response.json()
+    } else {
+      throw new Error('Открытка не найдена!')
+    }
   } catch (error) {
-    
+    console.error(error)
   }
 };
 
@@ -40,7 +46,19 @@ const init = async() => {
   window.addEventListener('resize', rearrangeElement)
 
   const id = getIdFromUrl();
-  const data = await getGiftData(id)
+
+  if (id) {
+    const data = await getGiftData(id)
+
+    if (data) {
+      cardImage.src = `img/${data.card}.jpg`;
+      cardFrom.textContent = data.sender_name;
+      cardTo.textContent = data.receiver_name;
+      const formatedMessage = data.message.replaceAll('\n', '<br>');
+      cardMessage.innerHTML =  formatedMessage;
+    }
+    
+  }
 };
 
 init();
